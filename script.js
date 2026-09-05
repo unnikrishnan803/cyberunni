@@ -165,35 +165,49 @@ function initStickyHeader() {
 // ====================================================
 function initMobileNavigation() {
   const toggleBtn = document.getElementById("mobile-menu-toggle");
+  const closeBtn = document.getElementById("mobile-drawer-close-btn");
   const drawer = document.getElementById("mobile-nav-drawer");
-  const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+  const backdrop = document.getElementById("mobile-nav-backdrop");
+  const mobileLinks = document.querySelectorAll(".mobile-nav-link, .mobile-drawer-footer a");
 
   if (!toggleBtn || !drawer) return;
 
-  const openDrawer = () => {
+  const openDrawer = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
     drawer.classList.add("open");
     toggleBtn.classList.add("open");
+    if (backdrop) backdrop.classList.add("open");
     toggleBtn.setAttribute("aria-expanded", "true");
     drawer.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("drawer-open");
   };
 
-  const closeDrawer = () => {
+  const closeDrawer = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
     drawer.classList.remove("open");
     toggleBtn.classList.remove("open");
+    if (backdrop) backdrop.classList.remove("open");
     toggleBtn.setAttribute("aria-expanded", "false");
     drawer.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
+    document.body.classList.remove("drawer-open");
   };
 
-  toggleBtn.addEventListener("click", () => {
+  toggleBtn.addEventListener("click", (e) => {
     const isOpen = drawer.classList.contains("open");
     if (isOpen) {
-      closeDrawer();
+      closeDrawer(e);
     } else {
-      openDrawer();
+      openDrawer(e);
     }
   });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", (e) => closeDrawer(e));
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener("click", (e) => closeDrawer(e));
+  }
 
   mobileLinks.forEach(link => {
     link.addEventListener("click", () => {

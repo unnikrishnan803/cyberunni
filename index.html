@@ -107,50 +107,59 @@
         </button>
       </div>
     </div>
+  </header>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
-      <div class="mobile-drawer-inner">
-        <div class="mobile-drawer-top">
-          <div class="mobile-drawer-logos">
-            <div class="brand-text-link">
-              <span class="brand-text-cyber">CYBER</span><span class="brand-text-space">SPACE</span>
-              <span class="brand-text-year">2026</span>
-            </div>
-            <img src="assets/logos/ieee-cs-logo.png" alt="IEEE CS" class="mobile-logo-item logo-ieee-light">
-            <img src="assets/logos/ieee-cs-logo-dark.png" alt="IEEE CS" class="mobile-logo-item logo-ieee-dark">
-            <img src="assets/logos/college-logo.png" alt="CE Cherthala" class="mobile-logo-item">
+  <!-- Mobile Navigation Backdrop Overlay -->
+  <div id="mobile-nav-backdrop" class="mobile-drawer-backdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer Menu (Outside Header to avoid stacking context & freezing bugs) -->
+  <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-top">
+        <div class="mobile-drawer-logos">
+          <div class="brand-text-link">
+            <span class="brand-text-cyber">CYBER</span><span class="brand-text-space">SPACE</span>
+            <span class="brand-text-year">2026</span>
           </div>
+          <img src="assets/logos/ieee-cs-logo.png" alt="IEEE CS" class="mobile-logo-item logo-ieee-light">
+          <img src="assets/logos/ieee-cs-logo-dark.png" alt="IEEE CS" class="mobile-logo-item logo-ieee-dark">
+          <img src="assets/logos/college-logo.png" alt="CE Cherthala" class="mobile-logo-item">
         </div>
+        <button id="mobile-drawer-close-btn" class="drawer-close-btn" aria-label="Close navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
 
-        <!-- Mobile Drawer Dedicated Appearance Toggle Bar -->
-        <div class="mobile-drawer-theme-bar">
-          <span class="mobile-theme-bar-label">APPEARANCE</span>
-          <button id="mobile-drawer-theme-toggle" class="drawer-theme-toggle-btn" aria-label="Toggle Theme Mode">
-            <span class="theme-text-dark">🌙 Dark Mode</span>
-            <span class="theme-text-light">☀️ Light Mode</span>
-            <span class="drawer-theme-switch-indicator">SWITCH</span>
-          </button>
-        </div>
-        <ul class="mobile-nav-list">
-          <li><a href="#hero" class="mobile-nav-link">HOME</a></li>
-          <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
-          <li><a href="#experience" class="mobile-nav-link">EXPERIENCE</a></li>
-          <li><a href="#speaker" class="mobile-nav-link">RESOURCE PERSON</a></li>
-          <li><a href="#dark-web" class="mobile-nav-link">DARK WEB</a></li>
-          <li><a href="#journey" class="mobile-nav-link">JOURNEY</a></li>
-          <li><a href="#venue" class="mobile-nav-link">VENUE</a></li>
-          <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
-        </ul>
-        <div class="mobile-drawer-footer">
-          <a href="https://forms.gle/u4UEDsYb3QibjnyV8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
-            <span>REGISTER NOW</span>
-            <span class="btn-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
+      <!-- Mobile Drawer Dedicated Appearance Toggle Bar -->
+      <div class="mobile-drawer-theme-bar">
+        <span class="mobile-theme-bar-label">APPEARANCE</span>
+        <button id="mobile-drawer-theme-toggle" class="drawer-theme-toggle-btn" aria-label="Toggle Theme Mode">
+          <span class="theme-text-dark">🌙 Dark Mode</span>
+          <span class="theme-text-light">☀️ Light Mode</span>
+          <span class="drawer-theme-switch-indicator">SWITCH</span>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link">HOME</a></li>
+        <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
+        <li><a href="#experience" class="mobile-nav-link">EXPERIENCE</a></li>
+        <li><a href="#speaker" class="mobile-nav-link">RESOURCE PERSON</a></li>
+        <li><a href="#dark-web" class="mobile-nav-link">DARK WEB</a></li>
+        <li><a href="#journey" class="mobile-nav-link">JOURNEY</a></li>
+        <li><a href="#venue" class="mobile-nav-link">VENUE</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="https://forms.gle/u4UEDsYb3QibjnyV8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block register-btn">
+          <span>REGISTER NOW</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
-  </header>
+  </div>
 
   <main id="main-content">
     
