@@ -19,8 +19,8 @@ const eventData = {
   edwhere: "https://www.edwhere.com",
   courses: "https://learn.edwhere.com",
   mapUrl: "https://maps.google.com/?q=College+of+Engineering+Cherthala+Pallippuram+Alappuzha",
-  instagram: "",
-  whatsapp: "",
+  instagram: "https://www.instagram.com/ieee.cs.cectl/",
+  whatsapp: "https://chat.whatsapp.com/LUTXtoMu7qyJvQGpSaWtW8",
   eventDateISO: "2026-09-19T09:00:00+05:30"
 };
 
@@ -64,18 +64,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ====================================================
-// 0. THEME SWITCHER (WHITE THEME DEFAULT + DARK TOGGLE)
+// 0. THEME SWITCHER (DARK THEME DEFAULT + LIGHT TOGGLE)
 // ====================================================
 function initTheme() {
   const toggleBtn = document.getElementById("theme-toggle");
-  const storedTheme = localStorage.getItem("cyberspace_theme") || "light";
+  const storedTheme = localStorage.getItem("cyberspace_theme") || "dark";
   document.documentElement.setAttribute("data-theme", storedTheme);
 
   if (!toggleBtn) return;
 
   toggleBtn.addEventListener("click", () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
-    const nextTheme = currentTheme === "light" ? "dark" : "light";
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
 
     document.documentElement.setAttribute("data-theme", nextTheme);
     localStorage.setItem("cyberspace_theme", nextTheme);
@@ -129,6 +129,12 @@ function initCentralConfig() {
 
   const footerLi = document.getElementById("footer-linkedin-link");
   if (footerLi && eventData.linkedin) footerLi.href = eventData.linkedin;
+
+  const footerIg = document.getElementById("footer-instagram-link");
+  if (footerIg && eventData.instagram) footerIg.href = eventData.instagram;
+
+  const footerWa = document.getElementById("footer-whatsapp-link");
+  if (footerWa && eventData.whatsapp) footerWa.href = eventData.whatsapp;
 }
 
 // ====================================================

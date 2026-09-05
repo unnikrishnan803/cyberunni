@@ -61,8 +61,8 @@ const eventData = {
     edwhere: "https://www.edwhere.com",
     courses: "https://learn.edwhere.com",
     mapUrl: "https://maps.google.com/?q=College+of+Engineering+Cherthala+Pallippuram+Alappuzha",
-    instagram: "", // Insert official Instagram URL when ready
-    whatsapp: "",  // Insert official WhatsApp community URL when ready
+    instagram: "https://www.instagram.com/ieee.cs.cectl/",
+    whatsapp: "https://chat.whatsapp.com/LUTXtoMu7qyJvQGpSaWtW8",
     eventDateISO: "2026-09-19T09:00:00+05:30"
 };
 ```
