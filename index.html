@@ -55,7 +55,8 @@
         </a>
         <div class="brand-separator" aria-hidden="true"></div>
         <div class="co-organizers">
-          <img src="assets/logos/ieee-cs-logo.png" alt="IEEE Computer Society Logo" class="brand-logo logo-ieee">
+          <img src="assets/logos/ieee-cs-logo.png" alt="IEEE Computer Society Logo" class="brand-logo logo-ieee logo-ieee-light">
+          <img src="assets/logos/ieee-cs-logo-dark.png" alt="IEEE Computer Society Logo" class="brand-logo logo-ieee logo-ieee-dark">
           <img src="assets/logos/college-logo.png" alt="College of Engineering Cherthala Logo" class="brand-logo logo-college">
         </div>
       </div>
@@ -116,9 +117,20 @@
               <span class="brand-text-cyber">CYBER</span><span class="brand-text-space">SPACE</span>
               <span class="brand-text-year">2026</span>
             </div>
-            <img src="assets/logos/ieee-cs-logo.png" alt="IEEE CS" class="mobile-logo-item">
+            <img src="assets/logos/ieee-cs-logo.png" alt="IEEE CS" class="mobile-logo-item logo-ieee-light">
+            <img src="assets/logos/ieee-cs-logo-dark.png" alt="IEEE CS" class="mobile-logo-item logo-ieee-dark">
             <img src="assets/logos/college-logo.png" alt="CE Cherthala" class="mobile-logo-item">
           </div>
+        </div>
+
+        <!-- Mobile Drawer Dedicated Appearance Toggle Bar -->
+        <div class="mobile-drawer-theme-bar">
+          <span class="mobile-theme-bar-label">APPEARANCE</span>
+          <button id="mobile-drawer-theme-toggle" class="drawer-theme-toggle-btn" aria-label="Toggle Theme Mode">
+            <span class="theme-text-dark">🌙 Dark Mode</span>
+            <span class="theme-text-light">☀️ Light Mode</span>
+            <span class="drawer-theme-switch-indicator">SWITCH</span>
+          </button>
         </div>
         <ul class="mobile-nav-list">
           <li><a href="#hero" class="mobile-nav-link">HOME</a></li>
@@ -1039,7 +1051,8 @@
           </p>
           <div class="footer-organizers-text">
             <div class="footer-logos-row">
-              <img src="assets/logos/ieee-cs-logo.png" alt="IEEE Computer Society" class="footer-ieee-logo" height="30" style="max-height: 30px; width: auto; object-fit: contain;">
+              <img src="assets/logos/ieee-cs-logo.png" alt="IEEE Computer Society" class="footer-ieee-logo footer-ieee-light" height="30" style="max-height: 30px; width: auto; object-fit: contain;">
+              <img src="assets/logos/ieee-cs-logo-dark.png" alt="IEEE Computer Society" class="footer-ieee-logo footer-ieee-dark" height="30" style="max-height: 30px; width: auto; object-fit: contain;">
               <img src="assets/logos/college-logo.png" alt="College of Engineering Cherthala" class="footer-college-logo" height="38" style="max-height: 38px; width: auto; object-fit: contain;">
             </div>
             <p><strong>IEEE Computer Society</strong></p>
@@ -1105,10 +1118,28 @@
         <span class="mobile-bar-title">CYBER SPACE 2026</span>
         <span class="mobile-bar-sub">19 Sep 2026 &middot; CECTL</span>
       </div>
-      <a href="https://forms.gle/u4UEDsYb3QibjnyV8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm register-btn">
-        <span>REGISTER NOW</span>
-        <span class="btn-arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="mobile-bar-actions">
+        <button id="mobile-bar-theme-toggle" class="mobile-bar-theme-btn" aria-label="Toggle Theme Mode" title="Toggle Theme">
+          <svg class="sun-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="https://forms.gle/u4UEDsYb3QibjnyV8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm register-btn">
+          <span>REGISTER NOW</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </aside>
 

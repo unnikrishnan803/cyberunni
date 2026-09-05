@@ -67,13 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // 0. THEME SWITCHER (DARK THEME DEFAULT + LIGHT TOGGLE)
 // ====================================================
 function initTheme() {
-  const toggleBtn = document.getElementById("theme-toggle");
+  const toggleButtons = document.querySelectorAll(
+    "#theme-toggle, #mobile-drawer-theme-toggle, #mobile-bar-theme-toggle, .theme-toggle-btn"
+  );
   const storedTheme = localStorage.getItem("cyberspace_theme") || "dark";
   document.documentElement.setAttribute("data-theme", storedTheme);
 
-  if (!toggleBtn) return;
-
-  toggleBtn.addEventListener("click", () => {
+  const toggleTheme = () => {
     const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
     const nextTheme = currentTheme === "dark" ? "light" : "dark";
 
@@ -84,6 +84,10 @@ function initTheme() {
     if (window.updateCanvasTheme) {
       window.updateCanvasTheme();
     }
+  };
+
+  toggleButtons.forEach(btn => {
+    btn.addEventListener("click", toggleTheme);
   });
 }
 

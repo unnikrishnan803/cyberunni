@@ -432,14 +432,33 @@ a {
 
 .logo-ieee {
   height: 28px;
-  background: transparent;
+  background: transparent !important;
   display: block;
 }
 
+.logo-ieee-light,
+.footer-ieee-light {
+  display: block;
+}
+
+.logo-ieee-dark,
+.footer-ieee-dark {
+  display: none;
+}
+
+[data-theme="dark"] .logo-ieee-light,
+[data-theme="dark"] .footer-ieee-light {
+  display: none !important;
+}
+
+[data-theme="dark"] .logo-ieee-dark,
+[data-theme="dark"] .footer-ieee-dark {
+  display: block !important;
+}
+
 [data-theme="dark"] .logo-ieee {
-  background: #ffffff;
-  padding: 2px 6px;
-  border-radius: var(--radius-sm);
+  background: transparent !important;
+  padding: 0 !important;
 }
 
 .logo-college {
@@ -574,6 +593,63 @@ a {
   height: 34px;
   width: auto;
   object-fit: contain;
+}
+
+/* Mobile Drawer Dedicated Appearance Toggle Bar */
+.mobile-drawer-theme-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  margin-top: -6px;
+}
+
+.mobile-theme-bar-label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.drawer-theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(234, 88, 12, 0.1);
+  border: 1px solid var(--border-accent);
+  color: var(--text-primary);
+  padding: 7px 14px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.drawer-theme-toggle-btn:hover {
+  background: rgba(234, 88, 12, 0.2);
+  border-color: var(--accent-orange);
+}
+
+.theme-text-dark { display: inline; }
+.theme-text-light { display: none; }
+
+[data-theme="light"] .theme-text-dark { display: none; }
+[data-theme="light"] .theme-text-light { display: inline; }
+
+.drawer-theme-switch-indicator {
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  background: var(--accent-orange);
+  color: #ffffff;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .mobile-nav-list {
@@ -2038,9 +2114,14 @@ a {
   width: auto;
   max-width: 140px;
   object-fit: contain;
+  background: transparent;
+  padding: 0;
+  border-radius: var(--radius-sm);
+}
+
+[data-theme="light"] .footer-ieee-logo {
   background: #ffffff;
   padding: 3px 8px;
-  border-radius: var(--radius-sm);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -2170,6 +2251,32 @@ a {
   color: var(--accent-cyan);
 }
 
+.mobile-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-bar-theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.mobile-bar-theme-btn:hover {
+  border-color: var(--border-accent);
+  color: var(--accent-orange);
+}
+
 /* --- Scroll Reveal Animations --- */
 .reveal-item {
   opacity: 0;
@@ -2229,6 +2336,10 @@ a {
   }
 
   .site-header .register-btn {
+    display: none;
+  }
+
+  .site-header .theme-toggle-btn {
     display: none;
   }
 
