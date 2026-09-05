@@ -444,8 +444,8 @@ function initNetworkCanvas() {
   function getThemeColors() {
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
     return {
-      nodeColor: isDark ? "255, 122, 26" : "234, 88, 12",
-      lineColor: isDark ? "255, 122, 26" : "234, 88, 12",
+      nodeColor: isDark ? "56, 189, 248" : "37, 99, 235",
+      lineColor: isDark ? "56, 189, 248" : "37, 99, 235",
       nodeAlphaMult: isDark ? 0.75 : 0.55,
       lineAlphaMult: isDark ? 0.2 : 0.14
     };
